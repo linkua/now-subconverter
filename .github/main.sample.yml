@@ -15,7 +15,7 @@ jobs:
     - name: Prepare
       run: |
         rm -rf subconverter
-        git clone https://github.com/tindy2013/subconverter.git
+        git clone https://github.com/linkua/subconverter.git
     - name: Build
       run: docker run -v $GITHUB_WORKSPACE/subconverter:/root/workdir multiarch/alpine:amd64-latest-stable /bin/sh -c "apk add bash git && cd /root/workdir && chmod +x scripts/build.alpine.release.sh && bash scripts/build.alpine.release.sh"
     - name: Clean up
